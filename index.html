@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="turn.js"></script>
+    
+
+      
+    <title>CratesOComics</title>
+</head>
+<body>
+  <header>
+    <button class="hamburger-menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  <nav id="navbar" class>
+      <a href="#Hero" class="active">Home</a>
+      <a href="#AboutMe">About Me</a>
+      <a href="#Section4">Solar</a>
+      <a href="#Section1">HighRoads</a>
+      <a href="#FanArt">Fan Art</a>
+      <a href="#Contact">Contact</a>
+  </nav>  
+</header>
+
+  <div class="snap-container">
+
+    <section id="Hero" class="hero-wrap snap-section">
+      <div class="content-wrap">
+        <h1>Crates</h1>
+        <div class="parallax-container">
+          <span value="-15"></span>
+          <span value="5"></span>
+          <span value="30"></span>
+          <span value="-5"></span>
+          <span value="15"></span>
+        </div>
+        <h2>Comics</h2>
+      </div>
+    </section>
+
+    <section class="Section snap-section" id="AboutMe">
+      <div class="aboutme-container">
+        <div class="aboutme-text">
+          <h2>About Me</h2>
+          <p>Hi, I'm Curtis, the creator of Crates O Comics. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et mauris sed dolor pellentesque semper. Praesent auctor varius interdum. Vestibulum cursus, erat vitae pharetra dignissim, risus metus convallis nunc, id facilisis tellus sapien sed mi.</p>
+          <p>Fusce in eros felis. Curabitur laoreet, odio at auctor efficitur, velit tortor feugiat nisl, eu aliquam urna orci non mi. Curabitur euismod dolor nec turpis facilisis, in varius lacus tincidunt. Quisque ultricies, augue id bibendum convallis, urna erat semper est, et eleifend eros lacus sit amet dui.</p>
+        </div>
+        <div class="aboutme-image">
+          <img src="images/aboutme.png" alt="About me">
+        </div>
+      </div>
+    </section>
+    
+    <section class="Section snap-section" id="Section4">
+      <div class="flipbook-container">
+        <div class="flipbook-container-outter">
+          <div class="flipbook-container-inner">
+            <div class="cover-info-wrapper">
+              <div class="info-container">
+                  <h2 class="book-title">Solar</h2>
+                  <button class="purchase-button" id="solar-button">Purchase</button>
+              </div>
+              <img class="cover-image" src="images/Solar/cover.png" draggable="false" alt="" />
+          </div>
+          <div class="flipbook-notice">
+            <img src="images/arrow.png" alt="Arrow">
+            <p>Click and drag to turn the page</p>
+          </div>
+
+             <div class="flipbook" id="flipbook4" style="display: none;">
+              <div class="page"><img src="images/Solar/cover.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Solar/1.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Solar/2.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Solar/3.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Solar/4.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Solar/back-cover.png" draggable="false" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <button class="exit-button" style="display: none;">X</button>
+    </section>
+
+    
+    <section class="Section snap-section" id="Section1">
+      <div class="flipbook-container">
+          <div class="flipbook-container-outter">
+              <div class="flipbook-container-inner">
+                  <div class="cover-info-wrapper">
+                  <div class="info-container">
+                      <h2 class="book-title">HighRoads</h2>
+                      <button class="purchase-button" id="HighRoads-button">Purchase</button>
+                  </div>
+                  <img class="cover-image" src="images/HighRoads/cover.png" draggable="false" alt="" />
+                </div>
+                <div class="flipbook-notice">
+                  <img src="images/arrow.png" alt="Arrow">
+                  <p>Click and drag to turn the page</p>
+                </div>
+            <!-- Keep flipbook initially hidden -->
+            <div class="flipbook" id="flipbook1" style="display: none;">
+              <div class="page"><img src="images/HighRoads/cover.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/HighRoads/2.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/HighRoads/3.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/HighRoads/4.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/HighRoads/5.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/HighRoads/back-cover.png" draggable="false" alt="" /></div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <button class="exit-button" style="display: none;">X</button>
+    </section>
+    <section class="Section snap-section" id="FanArt">
+    <section class="Section snap-section" id="Section2">
+      <div class="flipbook-container">
+        <div class="flipbook-container-outter">
+          <div class="flipbook-container-inner">
+            <div class="cover-info-wrapper">
+            <div class="info-container">
+              <h2 class="book-title">Crisis</h2>
+              <button class="purchase-button" id="crisis-button">Purchase</button>
+          </div>
+          <img class="cover-image" src="images/Crisis/cover.png" draggable="false" alt="" />
+        </div>
+        <div class="flipbook-notice">
+          <img src="images/arrow.png" alt="Arrow">
+          <p>Click and drag to turn the page</p>
+        </div>
+            <!-- Keep flipbook initially hidden -->
+            <div class="flipbook" id="flipbook2" style="display: none;">
+              <div class="page"><img src="images/Crisis/cover.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/back-cover.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/2.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/3.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/4.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/5.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/6.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/7.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/8.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/9.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/10.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/11.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/12.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/13.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/14.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/15.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/16.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/17.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Crisis/back-cover.png" draggable="false" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="exit-button" style="display: none;">X</button>
+    </section>
+
+    <section class="Section snap-section" id="Section3">
+      <div class="flipbook-container">
+        <div class="flipbook-container-outter">
+          <div class="flipbook-container-inner">
+            <div class="cover-info-wrapper">
+              <div class="info-container">
+                  <h2 class="book-title">Star Wars</h2>
+                  <button class="purchase-button" id="starwars-button">Purchase</button>
+              </div>
+              <img class="cover-image" src="images/StarWars/cover.png" draggable="false" alt="" />
+          </div>
+          <div class="flipbook-notice">
+            <img src="images/arrow.png" alt="Arrow">
+            <p>Click and drag to turn the page</p>
+          </div>
+
+             <div class="flipbook" id="flipbook3" style="display: none;">
+              <div class="page"><img src="images/StarWars/cover.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/StarWars/1.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/StarWars/2.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/StarWars/3.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/StarWars/4.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/StarWars/5.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/StarWars/6.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/StarWars/7.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/StarWars/back.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/StarWars/back-cover.png" draggable="false" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <button class="exit-button" style="display: none;">X</button>
+    </section>
+  </section>
+    
+
+
+    <script type="text/javascript" src="main.js"></script>
+
+    <section class="Section snap-section" id="Contact">
+      <form id="contact-form" action="https://formspree.io/f/moqojrlo" method="POST">
+        <h3>Send me a message!</h3>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="text" name="_gotcha" style="display:none" />
+        <button type="submit">Send</button>
+        <div id="form-result"></div> <!-- This will hold the result message -->
+      </form>  
+    </section>
+  </div>
+
+    
+
+    
+
+</body>
+</html>
