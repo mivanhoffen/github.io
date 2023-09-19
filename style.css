@@ -82,7 +82,7 @@ h3{
     font-size: 100px;
     color: white;
     z-index: 2;
-    margin: 2rem;
+
   }
   
   .parallax-container {
@@ -90,7 +90,9 @@ h3{
     width: 10rem;
     height: 10rem;
   }
-  
+  .hero-wrap h2 {
+    margin-left: 9rem;
+  }
   .hero-wrap span {
     position: absolute;
     height: 100%;
@@ -105,20 +107,23 @@ h3{
   /* Adjustments for mobile view */
   @media (max-width: 768px) {
     .hero-wrap h1, .hero-wrap h2 {
-      font-size: 50px;
+      font-size: 5rem;
       margin: 1rem;
     }
   
     .parallax-container {
-      width: 5rem;
-      height: 5rem;
+      width: 6rem;
+      height: 6rem;
+    }
+    .hero-wrap h2{
+      margin-left: 5rem;
     }
   }
   
 .content-wrap {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 section{
