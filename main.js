@@ -316,16 +316,52 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-//NavBar Hamburger
 document.addEventListener('DOMContentLoaded', (event) => {
   const hamburgerMenu = document.querySelector('.hamburger-menu');
   const sidebar = document.getElementById('navbar');
+  const navLinks = sidebar.querySelectorAll('a');
 
-  hamburgerMenu.addEventListener('click', () => {
-    if(sidebar.style.right === '0px') {
-      sidebar.style.right = '-250px'; /* Adjust as needed */
-    } else {
-      sidebar.style.right = '0px';
-    }
+  hamburgerMenu.addEventListener('click', toggleSidebar);
+
+  // Close the sidebar when any nav link is clicked
+  navLinks.forEach(link => {
+      link.addEventListener('click', toggleSidebar);
+  });
+
+  function toggleSidebar() {
+      if (sidebar.style.right === '0px' || sidebar.classList.contains('open')) {
+          sidebar.style.right = '-100vw';
+          sidebar.classList.remove('open');
+      } else {
+          sidebar.style.right = '0px';
+          sidebar.classList.add('open');
+      }
+  }
+});
+
+
+window.onload = function() {
+  // Ensure all images have loaded
+  $('.gallery').imagesLoaded(function() {
+      // Now initialize Masonry
+      $('.gallery').masonry({
+          itemSelector: '.gallery-item',
+          percentPosition: true,
+          columnWidth: '.gallery-item'
+      });
+  });
+};
+
+$(document).ready(function() {
+  $('.gallery').imagesLoaded(function() {
+      $('.gallery').masonry({
+          itemSelector: '.gallery-item',
+          percentPosition: true,
+          columnWidth: '.gallery-item'
+      });
+
+      // Manually initialize lightbox
+      $('[data-lightbox="gallery"]').lightbox();
   });
 });
+
