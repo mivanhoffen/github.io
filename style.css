@@ -37,15 +37,7 @@ body.no-scroll {
     height: 100%;
 }
 
-h1, h2{
-  font-size: 6em;
-  color: white;
-  z-index: 2;
-  position: relative;
-  padding-bottom: 1rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-}
+
 h3{
     font-size: em;
     color: white;
@@ -63,7 +55,16 @@ h3{
     width: 10rem;
     height: auto;
   }
- 
+  h1, h2 {
+    font-size: 6em;
+    color: white;
+    z-index: 2;
+    position: relative;
+    padding-bottom: 1rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  }
+  
   .hero-wrap {
     position: relative;
     width: 100%;
@@ -79,10 +80,10 @@ h3{
   
   .hero-wrap h1, .hero-wrap h2 {
     position: relative;
-    font-size: 100px;
+    font-size: 5em;  /* Adjusted from 100px */
     color: white;
     z-index: 2;
-
+    margin: 0.5rem 0; /* Added some vertical margin */
   }
   
   .parallax-container {
@@ -90,9 +91,11 @@ h3{
     width: 10rem;
     height: 10rem;
   }
+  
   .hero-wrap h2 {
-    margin-left: 9rem;
+    margin-left: 10rem; /* Reduced margin */
   }
+  
   .hero-wrap span {
     position: absolute;
     height: 100%;
@@ -107,18 +110,83 @@ h3{
   /* Adjustments for mobile view */
   @media (max-width: 768px) {
     .hero-wrap h1, .hero-wrap h2 {
-      font-size: 5rem;
-      margin: 1rem;
+      font-size: 4rem;  /* Reduced font size further for mobile */
+      margin: 0.5rem 0;
     }
   
     .parallax-container {
-      width: 6rem;
-      height: 6rem;
+      width: 5rem;
+      height: 5rem;
     }
-    .hero-wrap h2{
-      margin-left: 5rem;
+  
+    .hero-wrap h2 {
+      margin-left: 4rem; /* Further reduced margin for mobile */
     }
-  }
+    h2 {
+      font-size: 3rem;
+    }
+   
+    .aboutme-container {
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+  
+    .aboutme-text, .aboutme-image {
+      padding: 1em 0;
+      text-align: center;
+      margin: 0; /* Reset margin */
+    }
+  
+    .aboutme-image img {
+      max-width: 90%;
+      margin: auto; /* Center the image */
+      display: block; /* Ensure the image is a block element */
+    }
+    }
+  
+    @media (max-width: 550px) {
+      .hero-wrap h1, .hero-wrap h2 {
+        font-size: 2rem;  /* Reduced font size further for mobile */
+        margin: 0.5rem 0;
+      }
+    
+      .parallax-container {
+        width: 5rem;
+        height: 5rem;
+      }
+    
+      .hero-wrap h2 {
+        margin-left: 4rem; /* Further reduced margin for mobile */
+      }
+      h2 {
+        font-size: 2rem;
+      }
+     
+        .aboutme-container {
+          flex-direction: column; /* Stack items vertically */
+          margin-left: 0; /* Reset the margin */
+          align-items: center; /* Center the items */
+          width: 100%;
+        }
+      
+        .aboutme-text, .aboutme-image {
+          padding: 0; /* Adjust padding for better spacing */
+          text-align: center; /* Center the content */
+        }
+      
+        .aboutme-image img {
+          max-width: 100%; /* Adjust image size for mobile screens */
+        }
+        .aboutme-text {
+          flex: 1;
+          padding-right: 2em;
+          color: #fff;
+          font-size: 0.9rem;
+        }
+      }
+  
   
 .content-wrap {
   display: flex;
@@ -164,6 +232,7 @@ section{
   height: auto;
   border-radius: 5px; 
 }
+
 
 
 #Section1 {
@@ -410,7 +479,7 @@ scrollbar-width: none;  /* Firefox */
   background: #fffefe;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   /* Display hamburger menu on small screens */
   .hamburger-menu {
     display: block;
