@@ -200,25 +200,28 @@ sections.forEach((section, i) => {
   });
 
 
-// Get the middle position of the stationary span
-const stationarySpan = document.querySelector(".parallax-container span:nth-child(3)");
-const rect = stationarySpan.getBoundingClientRect();
-const stationaryX = rect.left + window.scrollX;
-const stationaryY = rect.top + window.scrollY;
+  window.onload = function() {
+    // Get the middle position of the stationary span
+    const stationarySpan = document.querySelector(".parallax-container span:nth-child(3)");
+    const rect = stationarySpan.getBoundingClientRect();
+    const stationaryX = rect.left + window.scrollX;
+    const stationaryY = rect.top + window.scrollY;
 
-// Initial setup
-document.querySelectorAll(".parallax-container span").forEach((shift, index) => {
-    if (index !== 2) {
-        // Calculate the initial position relative to the stationary span
-        const x = shift.getBoundingClientRect().left - stationaryX;
-        const y = shift.getBoundingClientRect().top - stationaryY;
-        // Store the initial position in data attributes
-        shift.dataset.initialX = x;
-        shift.dataset.initialY = y; // Adjust this offset value as needed
-        // Apply the initial transformation
-        shift.style.transform = `translateX(${x}px) translateY(${y + 50}px)`; 
-    }
-});
+    // Initial setup
+    document.querySelectorAll(".parallax-container span").forEach((shift, index) => {
+        if (index !== 2) {
+            // Calculate the initial position relative to the stationary span
+            const x = shift.getBoundingClientRect().left - stationaryX;
+            const y = shift.getBoundingClientRect().top - stationaryY;
+            // Store the initial position in data attributes
+            shift.dataset.initialX = x;
+            shift.dataset.initialY = y;
+            // Apply the initial transformation
+            shift.style.transform = `translateX(${x}px) translateY(${y}px)`; 
+        }
+    });
+}
+
 
 // On mousemove
 document.querySelector(".hero-wrap").addEventListener("mousemove", parallax);
