@@ -64,7 +64,24 @@ h3{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
   }
-  
+  h4 {
+    font-size: 5em;
+    color: white;
+    z-index: 2;
+    position: relative;
+    padding-bottom: 1rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  }
+  h5{
+    font-size: 3em;
+    color: white;
+    z-index: 2;
+    position: relative;
+    padding-bottom: 1rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  }
   .hero-wrap {
     position: relative;
     width: 100%;
@@ -270,7 +287,14 @@ section{
   justify-content: center;
   align-items: center;
   min-height: 100vh; 
-  background-color: #F5DDAD;
+  background-color: #c0aa7e;
+}
+#Image-Gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  background-color: #344b5f;
 }
 
 
@@ -420,7 +444,7 @@ transform: scale(1.2);
 
 
 .book-title {
-  font-size: 24px;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -490,8 +514,20 @@ scrollbar-width: none;  /* Firefox */
   }
 
   #navbar {
-    right: -250px; /* Adjust as needed */
-  }
+    width: 100vw;
+    height: 100vh;
+    background-color: #1A2238;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    transition: right 0.5s;
+    z-index: 999;
+}
+
+#navbar.open {
+    right: 0;
+}
 }
 
 nav {
@@ -621,4 +657,24 @@ nav {
   cursor: none;
   width: 100px;
   height: 100px;
+}
+
+.gallery {
+  width: calc(100% + 20px); /* Adjusted to accommodate the side margins */
+  margin: 0 auto;
+  max-width: 1220px; /* Original max-width + 20px */
+  margin-left: -10px; /* To ensure the gallery doesn't shift due to the added margin on gallery items */
+}
+
+
+.gallery-item {
+  width: calc(33.333% - 20px); /* Subtracting 20px for the 10px gap on both sides */
+  margin: 10px; /* This will add a 10px gap to all sides */
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05); /* Slightly scale the image */
+  filter: brightness(1.2); /* Increase brightness */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
