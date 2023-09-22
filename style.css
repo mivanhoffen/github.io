@@ -272,6 +272,10 @@ section{
   min-height: 100vh; 
   background-color: #F5DDAD;
 }
+
+
+
+
 .flipbook-container {
   align-items: flex-start;
   display: flex;
