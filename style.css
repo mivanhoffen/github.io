@@ -169,7 +169,6 @@ h3{
         font-size: 2rem;  /* Reduced font size further for mobile */
         margin: 0.5rem 0;
       }
-    
       .parallax-container {
         width: 5rem;
         height: 5rem;
@@ -181,28 +180,26 @@ h3{
       h2 {
         font-size: 2rem;
       }
-     
-        .aboutme-container {
-          flex-direction: column; /* Stack items vertically */
-          margin-left: 0; /* Reset the margin */
-          align-items: center; /* Center the items */
-          width: 100%;
-        }
-      
-        .aboutme-text, .aboutme-image {
-          padding: 0; /* Adjust padding for better spacing */
-          text-align: center; /* Center the content */
-        }
-      
-        .aboutme-image img {
-          max-width: 100%; /* Adjust image size for mobile screens */
-        }
         .aboutme-text {
-          flex: 1;
-          padding-right: 2em;
-          color: #fff;
-          font-size: 0.9rem;
-        }
+          padding: 0 !important; 
+          margin: 0 auto !important;
+          max-width: none !important;
+          width: 100% !important;
+          font-size: 1rem !important;
+      }
+      .aboutme-container, .aboutme-text {
+        padding: 0 !important;
+        margin: 0 auto !important;
+        width: 90% !important;
+        box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    }
+    .aboutme-image img {
+      max-width: 100% !important;
+      margin-left: 1.2rem; /* Center the image */
+      display: block; /* Ensure the image is a block element */
+      align-items: center;
+    }
+    
       }
   
   
