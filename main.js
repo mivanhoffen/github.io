@@ -257,30 +257,32 @@ document.querySelector(".hero-wrap").addEventListener("mouseleave", function(eve
 
 //Navigation Bar JS
 // Add smooth scrolling to all links
+// Add smooth scrolling to all links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();  // Prevent the event from propagating
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
 });
 
 
-// Hide navbar when entering flipbook mode
+//Hide navbar when entering flipbook mode
 document.querySelectorAll(".cover-image").forEach((coverImage) => {
-    coverImage.addEventListener("click", function() {
-      document.querySelector("#navbar").classList.add("hidden");
-    });
+  coverImage.addEventListener("click", function() {
+    document.querySelector("#navbar").style.right = '-100vw';
   });
-  
-  // Show navbar when exiting flipbook mode
-  document.querySelectorAll(".exit-button").forEach((exitButton) => {
-    exitButton.addEventListener("click", function() {
-      document.querySelector("#navbar").classList.remove("hidden");
-    });
+});
+
+// Show navbar when exiting flipbook mode
+document.querySelectorAll(".exit-button").forEach((exitButton) => {
+  exitButton.addEventListener("click", function() {
+    document.querySelector("#navbar").style.right = '0';
   });
+});
+
   
   document.addEventListener("DOMContentLoaded", function() {
     let observer = new IntersectionObserver((entries, observer) => {
@@ -321,7 +323,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const sidebar = document.getElementById('navbar');
   const navLinks = sidebar.querySelectorAll('a');
 
-  hamburgerMenu.addEventListener('click', toggleSidebar);
+  hamburgerMenu.addEventListener('click', function(e) {
+    e.stopPropagation();
+    toggleSidebar();
+});
+
 
   // Close the sidebar when any nav link is clicked
   navLinks.forEach(link => {
@@ -338,6 +344,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       }
   }
 });
+
 
 
 window.onload = function() {
