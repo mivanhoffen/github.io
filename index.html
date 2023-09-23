@@ -27,9 +27,11 @@
       <a href="#Hero" class="active">Home</a>
       <a href="#AboutMe">About Me</a>
       <a href="#Section4">Solar</a>
+      <a href="#Ended-Section">Ended</a>
       <a href="#Section1">HighRoads</a>
-      <a href="#FanArt">Fan Art</a>
-      <a href="#Image-Gallery">Prints</a>
+      <a href="#Section2">Crisis Fan Art</a>
+      <a href="#Section3">Star Wars Fan Art</a>
+      <!--<a href="#Image-Gallery">Prints</a>-->
       <a href="#Contact">Contact</a>
   </nav>  
 </header>
@@ -54,11 +56,14 @@
       <div class="aboutme-container">
         <div class="aboutme-text">
           <h2>About Me</h2>
-          <p>Hi, I'm Curtis, the creator of Crates O Comics. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et mauris sed dolor pellentesque semper. Praesent auctor varius interdum. Vestibulum cursus, erat vitae pharetra dignissim, risus metus convallis nunc, id facilisis tellus sapien sed mi.</p>
-          <p>Fusce in eros felis. Curabitur laoreet, odio at auctor efficitur, velit tortor feugiat nisl, eu aliquam urna orci non mi. Curabitur euismod dolor nec turpis facilisis, in varius lacus tincidunt. Quisque ultricies, augue id bibendum convallis, urna erat semper est, et eleifend eros lacus sit amet dui.</p>
+          <p>Hi, I'm Curtis. I'm an illustrator, a writer, and a comic book creator. I have been drawing and creating comic books since before I could read them. I published my first comic book in grade 12, and then took a break for school. However, I quickly realized that art and comic books are my passion and decided to pursue publishing original comics.</p>
+
+           <p> I love all things comics, so on this page you will see my original books (such as Ended and Super-Crew: Solar which are both now available on Amazon); you will find original artwork, stories, and fan creations as well. I hope you enjoy my work, feel free to send me a message with comments or questions.</p>
+            
+           <p> You can find me on Instagram as well <a href="https://www.instagram.com/cratesocomics/" target="_blank">@cratesocomics</a></p>
         </div>
         <div class="aboutme-image">
-          <img src="images/aboutme.png" alt="About me">
+          <img src="images/2023 08 03/IlMando.jpg" alt="About me">
         </div>
       </div>
     </section>
@@ -69,10 +74,12 @@
           <div class="flipbook-container-inner">
             <div class="cover-info-wrapper">
               <div class="info-container">
-                  <h2 class="book-title">Solar</h2>
-                  <button class="purchase-button" id="solar-button">Purchase</button>
+                  <h2 class="book-title">Super Crew:<br>Solar</h2>
+                  <a href="https://www.amazon.ca/Super-Crew-Solar-Curtis-M-Dykstra/dp/B0C2S6BLNH/ref=sr_1_1?crid=3FPOI2Y20H5EG&keywords=curtis+dykstra&qid=1695472910&sprefix=curtis+dykstra%2Caps%2C107&sr=8-1" target="_blank">
+                  <button class="purchase-button" id="solar-button">Purchase</button> 
+                </a>
               </div>
-              <img class="cover-image" src="images/Solar/cover.png" draggable="false" alt="" />
+              <img class="cover-image" src="images/2023 08 03/Super Crew Cover 1.jpg" draggable="false" alt="" />
           </div>
           <div class="flipbook-notice">
             <img src="images/arrow.png" alt="Arrow">
@@ -80,20 +87,51 @@
           </div>
 
              <div class="flipbook" id="flipbook4" style="display: none;">
-              <div class="page"><img src="images/Solar/cover.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/2023 08 03/Super Crew Cover 1.jpg"" draggable="false" alt="" /></div>
               <div class="page"><img src="images/Solar/1.png" draggable="false" alt="" /></div>
               <div class="page"><img src="images/Solar/2.png" draggable="false" alt="" /></div>
               <div class="page"><img src="images/Solar/3.png" draggable="false" alt="" /></div>
               <div class="page"><img src="images/Solar/4.png" draggable="false" alt="" /></div>
               <div class="page"><img src="images/Solar/back-cover.png" draggable="false" alt="" /></div>
-            </div>
+             
           </div>
         </div>
       </div>
     <button class="exit-button" style="display: none;">X</button>
     </section>
 
-    
+    <section class="Section snap-section" id="Ended-Section">
+      <div class="flipbook-container">
+          <div class="flipbook-container-outter">
+              <div class="flipbook-container-inner">
+                  <div class="cover-info-wrapper">
+                  <div class="info-container">
+                      <h2 class="book-title">Ended</h2>
+                      <a href="https://www.amazon.ca/Ended-Curtis-Dykstra-ebook/dp/B0C66VXG5N/ref=sr_1_4?crid=3FPOI2Y20H5EG&keywords=curtis+dykstra&qid=1695474681&sprefix=curtis+dykstra%2Caps%2C107&sr=8-4">
+                      <button class="purchase-button" id="Ended-button">Purchase</button>
+                    </a>
+                  </div>
+                  <img class="cover-image" src="images/Ended/Ended1title.jpg" draggable="false" alt="" />
+                </div>
+                <div class="flipbook-notice">
+                  <img src="images/arrow.png" alt="Arrow">
+                  <p>Click and drag to turn the page</p>
+                </div>
+            <!-- Keep flipbook initially hidden -->
+            <div class="flipbook" id="flipbook1" style="display: none;">
+              <div class="page"><img src="images/Ended/Ended1title.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Ended/1.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Ended/2.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Ended/3.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/Ended/4.png" draggable="false" alt="" /></div>
+              <div class="page"><img src="images/HighRoads/back-cover.png" draggable="false" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="exit-button" style="display: none;">X</button>
+    </section>
+
     <section class="Section snap-section" id="Section1">
       <div class="flipbook-container">
           <div class="flipbook-container-outter">
@@ -124,7 +162,7 @@
       </div>
       <button class="exit-button" style="display: none;">X</button>
     </section>
-    <section class="Section snap-section" id="FanArt">
+
     <section class="Section snap-section" id="Section2">
       <div class="flipbook-container">
         <div class="flipbook-container-outter">
@@ -132,7 +170,7 @@
             <div class="cover-info-wrapper">
             <div class="info-container">
               <h2 class="book-title">Crisis</h2>
-              <button class="purchase-button" id="crisis-button">Purchase</button>
+              <button class="purchase-button" id="crisis-button" style="display: none;" ></button>
           </div>
           <img class="cover-image" src="images/Crisis/cover.png" draggable="false" alt="" />
         </div>
@@ -143,7 +181,6 @@
             <!-- Keep flipbook initially hidden -->
             <div class="flipbook" id="flipbook2" style="display: none;">
               <div class="page"><img src="images/Crisis/cover.png" draggable="false" alt="" /></div>
-              <div class="page"><img src="images/Crisis/back-cover.png" draggable="false" alt="" /></div>
               <div class="page"><img src="images/Crisis/2.png" draggable="false" alt="" /></div>
               <div class="page"><img src="images/Crisis/3.png" draggable="false" alt="" /></div>
               <div class="page"><img src="images/Crisis/4.png" draggable="false" alt="" /></div>
@@ -175,7 +212,7 @@
             <div class="cover-info-wrapper">
               <div class="info-container">
                   <h2 class="book-title">Star Wars</h2>
-                  <button class="purchase-button" id="starwars-button">Purchase</button>
+                  <button class="purchase-button" id="starwars-button" style="display: none;" ></button>
               </div>
               <img class="cover-image" src="images/StarWars/cover.png" draggable="false" alt="" />
           </div>
@@ -201,7 +238,7 @@
       </div>
     <button class="exit-button" style="display: none;">X</button>
     </section>
-  </section>
+    <!--
   <section class="Section snap-section" id="Image-Gallery">
     <h4>Solo Print Showcase</h4>
     <div class="gallery" data-masonry='{ "itemSelector": ".gallery-item" }'>
@@ -244,6 +281,7 @@
 
   </div>  
   </section>
+-->
     
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
